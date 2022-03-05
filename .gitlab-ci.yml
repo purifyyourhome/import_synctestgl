@@ -3,7 +3,7 @@ image: i386/debian
 mirror:
   before_script:
     # Install prerequisites
-    - 'which ssh-agent || (apk update && apk add openssh-client git)'
+    - 'which ssh-agent || (sudo apt-get update && sudo apt-get install openssh-client git)'
 
   script:
     ## Import SSH key
