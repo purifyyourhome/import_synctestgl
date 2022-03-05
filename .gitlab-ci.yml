@@ -1,9 +1,9 @@
-image: i386/debian
+image: node:alpine
 
 mirror:
   before_script:
     # Install prerequisites
-    - 'which ssh-agent || (sudo apt-get update && sudo apt-get install openssh-client git)'
+    - 'which ssh-agent || (apk update && apk add openssh-client git)'
 
   script:
     ## Import SSH key
